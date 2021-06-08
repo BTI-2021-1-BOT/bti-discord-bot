@@ -7,12 +7,10 @@ client.once("ready", () => {
   console.log("Iniciou!");
 });
 
-client.on("guildMemberAdd", (message) => {
-  if (message.content === "!test") {
-    message.author.send(
-      "Olá, seja bem vindo ao servidor de BTI 2021.1!! 🥳\nClique no link abaixo e vá para a mensagem de escolha de cargos!\nhttps://discord.com/channels/851492197941772298/851644612896489503/851645465388122132"
-    );
-  }
+client.on("guildMemberAdd", (member) => {
+  member.send(
+    "Olá, seja bem vindo ao servidor de BTI 2021.1!! 🥳\nClique no link abaixo e vá para a mensagem de escolha de cargos!\nhttps://discord.com/channels/851492197941772298/851644612896489503/851645465388122132"
+  );
 });
 
 const roles = {
