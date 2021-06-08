@@ -44,7 +44,6 @@ async function mutateRole(event, member, role) {
       }
     }
   }
-  return;
 }
 
 client.on("raw", async (data) => {
