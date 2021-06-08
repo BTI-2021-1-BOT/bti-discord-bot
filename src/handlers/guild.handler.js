@@ -1,10 +1,13 @@
 const { roleTriggers } = require("../enums/guild.enums");
+const messages = require("../utils/messages.utils");
 
-module.exports = ({ event, messageId, emoji }) => {
+module.exports = (data) => {
+  const eventType = data.t;
   if (
-    (event === "MESSAGE_REACTION_ADD" || event === "MESSAGE_REACTION_REMOVE") &&
-    messageId === process.env.GUILD_MESSAGE_ID &&
-    Object.keys(roleTriggers).indexOf(emoji) !== -1
+    (eventType === "MESSAGE_REACTION_ADD" ||
+      eventType === "MESSAGE_REACTION_REMOVE") &&
+    data.d.message_id === messages.guildReaction &&
+    Object.keys(roleTriggers).indexOf(data.d.emoji.name) !== -1
   ) {
     return true;
   }
