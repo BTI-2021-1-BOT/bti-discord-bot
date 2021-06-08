@@ -11,5 +11,7 @@ Vá até a pasta que foi criada
 Instale as dependências:
 `yarn` ou `npm i`
 
+Fala comigo para pegar o .env: Nicolau#0040
+
 Só rodar o projeto :)
 `yarn start` ou `npm start`
